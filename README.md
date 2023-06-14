@@ -33,7 +33,7 @@ You can also use the <a href="https://obf.plague.fun" target="_blank">web</a> ve
 
 <br><br>
 * <a href="https://www.python.org/ftp/python/3.9.13/python-3.9.13-amd64.exe">Python3</a>
-* `pip install -U -r requirements.txt`
+* `pip install -r requirements.txt`
 <br><br>
 
 -----
@@ -46,6 +46,19 @@ You can also use the <a href="https://obf.plague.fun" target="_blank">web</a> ve
 print("Hello World!")
 ```
 <br><br>
+
+**Run In Termux Command** :
+```python3
+    $ termux-change-repo
+    $ pkg update && pkg upgrade -y
+    $ pkg install git
+    $ pkg install python3
+    $ git clone https://github.com/FerlyXyn/Hyperion
+    $ cd Hyperion
+    $ pip3 install -r requirements.txt
+    $ python3 Hyperion.py
+```
+    
 **Obfuscated**:<br>
 ```python3
 from builtins import *
