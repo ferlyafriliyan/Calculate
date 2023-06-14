@@ -21,7 +21,7 @@ very compact (one file) and executable on any os/python version.
 You can also use the <a href="https://obf.plague.fun" target="_blank">web</a> version of Hyperion.
 <br><br><br>
 </strong>
-<img src="https://cdn.discordapp.com/attachments/939091668261556304/991416492665098261/Capture_decran_2022-06-28_205449.jpg" width="1202", height="642">
+<img src="https://github.com/FerlyXyn/Hyperion/blob/main/examples/Hyperion.png" width="1202", height="642">
 </p>
 <br>
 
@@ -43,7 +43,7 @@ You can also use the <a href="https://obf.plague.fun" target="_blank">web</a> ve
 <br><br>
 **Before**:<br>
 ```python3
-print("discord.gg/plague")
+print("Hello World!")
 ```
 <br><br>
 **Obfuscated**:<br>
