@@ -149,7 +149,7 @@ try:
     if (
         __obfuscator__ != "Hyperion" or
         __authors__ != ("FerlyXyn", "BlueRed") or
-        __facebook__ != "__facebook__ = 'https://www.facebook.com/Denventa.Xayonara.Team.UnlimitedARMY'"
+        __facebook__ != 'https://www.facebook.com/Denventa.Xayonara.Team.UnlimitedARMY'"
         __github__ != "https://github.com/FerlyXyn/Hyperion" or
         __license__ != "EPL-2.0" or
         __code__ != 'print("Hello world!")'
