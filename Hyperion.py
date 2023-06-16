@@ -517,7 +517,7 @@ if __name__ == '__main__':
         ))
     
     def _randvar2(self):
-        return ''.join(choice('billythegoat356BlueRed') for _ in range(randint(5, 20)))
+        return ''.join(choice('FerlyXynBlueRed') for _ in range(randint(5, 20)))
 
     def _randglob(self):
         return choice((
