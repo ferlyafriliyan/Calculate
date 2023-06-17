@@ -149,14 +149,13 @@ try:
     if (
         __obfuscator__ != "Hyperion" or
         __authors__ != ("FerlyXyn", "BlueRed") or
-        __facebook__ != 'https://www.facebook.com/Denventa.Xayonara.Team.UnlimitedARMY'"
         __github__ != "https://github.com/FerlyXyn/Hyperion" or
         __license__ != "EPL-2.0" or
         __code__ != 'print("Hello world!")'
     ):
         int('skid')
 except:
-    input("The rose is red\nViolet flowers are blue\nYou change the code\nNobody likes you")
+    input("Roses are red\nViolets are blue\nYou are a skid\nNobody likes you")
     __import__('sys').exit()
 
 
@@ -423,7 +422,6 @@ from math import prod as {gen[5]}
 
 __obfuscator__ = 'Hyperion'
 __authors__ = ('FerlyXyn', 'BlueRed')
-__facebook__ = 'https://www.facebook.com/Denventa.Xayonara.Team.UnlimitedARMY'
 __github__ = 'https://github.com/FerlyXyn/Hyperion'
 __license__ = 'EPL-2.0'
 
