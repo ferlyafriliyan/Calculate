@@ -14,6 +14,8 @@ from random import choice, shuffle, randint
 
 from zlib import compress
 
+from PIL import Image, ImageFilter
+
 
 class Quantum:
     def __init__(self, content: str, clean=True, obfcontent=True, renlibs=True, renvars=True, addbuiltins=True,
@@ -156,6 +158,16 @@ __instagram__ = 'Instagram.com/afriliyanferlly_shishigami'
             file.write(self.content)
 
         print(f"File {filename} berhasil dienkripsi. File hasil enkripsi tersimpan dalam {obfuscated_filename}.")
+
+        self._blur_image(obfuscated_filename)
+
+    def _blur_image(self, filename):
+        image = Image.open(filename)
+        blurred_image = image.filter(ImageFilter.BLUR)
+        blurred_filename = "hidden_image.jpg"
+        blurred_image.save(blurred_filename)
+
+        print(f"File hasil enkripsi telah disimpan dalam gambar {blurred_filename} dengan pengaburan.")
 
     def main(self):
         os.system("mode con: cols=150 lines=47")
