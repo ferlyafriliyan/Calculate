@@ -52,14 +52,17 @@ __File__    = "Quantum__Obfuscated__"
 
 # 
 
-__Author__  = "[ Ferly Afriliyan (Avs4x-Dvanmeploph) ]"
-__Github__  = "https://github.com/FerlyXyn/Quantum"
-__License__ = "EPL-2.0"
+__obfuscated__ = 'Quantum'
+__author__  = '[ Ferly Afriliyan (Avs4x-Dvanmeploph) ]', 'BlueRed'
+__github__  = 'https://github.com/FerlyXyn/Quantum'
+__license__ = 'EPL-2.0'
+
+__code__    = 'print("Hello World!")'
 
 # 
 
-__Facebook__  = "www.facebook.com/freya.xyn"
-__Instagram__ = "Instagram.com/afriliyanferlly_shishigami"
+__facebook__  = 'www.facebook.com/freya.xyn'
+__instagram__ = 'Instagram.com/afriliyanferlly_shishigami'
 
 
 {self.content.strip()}"""
