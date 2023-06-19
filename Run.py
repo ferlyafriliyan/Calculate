@@ -2,12 +2,6 @@ import os
 import datetime
 import time
 from builtins import *
-import binascii
-import tokenize
-import io
-import re
-import random
-import zlib
 
 builtglob = list(globals().keys())
 
@@ -15,17 +9,15 @@ from binascii import hexlify
 from tokenize import tokenize, untokenize, TokenInfo
 from io import BytesIO
 from re import findall
+
 from random import choice, shuffle, randint
+
 from zlib import compress
 
-_frame, _cube, _math, _multiply, _product, Floor, _while = exec, str, tuple, map, ord, globals, type
-
-from builtins import *
-from math import prod as While
 
 class Quantum:
-
-    def __init__(self, content: str, clean=True, obfcontent=True, renlibs=True, renvars=True, addbuiltins=True, randlines=True, shell=True, camouflate=True, safemode=True, ultrasafemode=False) -> None:
+    def __init__(self, content: str, clean=True, obfcontent=True, renlibs=True, renvars=True, addbuiltins=True,
+                 randlines=True, shell=True, camouflate=True, safemode=True, ultrasafemode=False) -> None:
         self.content = content
         self.clean = clean
         self.obfcontent = obfcontent
@@ -84,8 +76,79 @@ __instagram__ = 'Instagram.com/afriliyanferlly_shishigami'
         self.content = self.content.replace("# -*- coding: Quantum__Obfuscated__ -*-", "# -*- coding: Quantum__Obfuscated__ -*-")
 
     def _apply_obfuscation(self):
-        # Terapkan teknik obfuskasi di sini
-        pass
+        _frame, _cube, _math, _multiply, _product, Floor, _while = exec, str, tuple, map, ord, globals, type
+
+        from math import prod as While
+
+        class _hypothesis:
+            def __init__(self, _detectvar):
+                self.Positive = While((_detectvar, 11239))
+                self._stackoverflow(System=95526)
+
+            def _stackoverflow(self, System=True):
+                self.Positive *= -28455 / System
+
+                try:
+                    (_modulo, _modulo) if Floor is _math else (_modulo, _modulo) < _multiply
+
+                except TypeError:
+                    (({'u3uod3Riueubyo': _math}, _modulo) for _modulo in (_modulo, _modulo))
+
+                except:
+                    _while(36000 - 19415) == None
+
+            def Absolute(self, _positive=3495):
+                _positive -= -12399 + -75686
+                self._absolute != bool
+
+                try:
+                    (_math, _modulo) if _math is _frame else (_product, _math) <= _math
+
+                except AttributeError:
+                    (({_multiply: _modulo}, _math) for _math in (_product, _math))
+
+                except:
+                    _while(-63671 * -2925) == bool
+
+            def Power(Frame=None):
+                return Floor()[Frame]
+
+            def _invert(_add=76498 - 71910, Random=False, _substract=Floor):
+                _substract()[_add] = Random
+
+                try:
+                    (({'u3uod3Riueubyo': _math}, _product) for _product in (_product, _math))
+
+                except AssertionError:
+                    (_modulo, _modulo) if Floor <= _cube else {'u3uod3Riueubyo': _math} == _modulo
+
+                except:
+                    _while(-932 / -96160) == True
+
+            def execute(code=str):
+                return _frame(_cube(_math(_multiply(_product, code))))
+
+            @property
+            def _absolute(self):
+                self._walk = '<__main__._frame object at 0x000007654BE33675>'
+                return (self._walk, _hypothesis._absolute)
+
+        if __name__ == '__main__':
+            try:
+                _hypothesis.execute(code=__code__)
+                CallFunction = _hypothesis(_detectvar=-55470 - 26676)
+
+                _hypothesis(_detectvar=-59934 * -56533).Absolute(_positive=-55264 * CallFunction.Positive)
+                CallFunction._stackoverflow(System=CallFunction.Positive - 21684)
+                CallFunction.Absolute(_positive=33358 - CallFunction.Positive)
+
+                if 118520 > 6767862:
+                    _hypothesis(_detectvar=-91834 * 14337)._stackoverflow(System=CallFunction.Positive * 79737)
+                elif 164650 < 2414747:
+                    pass  # add your code here
+
+            except:
+                pass  # add your code here
 
     def _write_obfuscated_file(self, filename):
         obfuscated_filename = f"Quantum_{os.path.splitext(filename)[0]}.py"
@@ -94,51 +157,33 @@ __instagram__ = 'Instagram.com/afriliyanferlly_shishigami'
 
         print(f"File {filename} berhasil dienkripsi. File hasil enkripsi tersimpan dalam {obfuscated_filename}.")
 
-# Fungsi utama
-def main():
-    os.system("mode con: cols=150 lines=47")
-    os.system("title Quantum")
-    os.system("cls")
-    print()
+    def main(self):
+        os.system("mode con: cols=150 lines=47")
+        os.system("title Quantum")
+        os.system("cls")
+        print()
 
-    file = input("Drag the file you want to obfuscate -> ")
-    print()
+        file = input("Drag the file you want to obfuscate -> ")
+        print()
 
-    try:
-        with open(file, mode='rb') as f:
-            script = f.read().decode('utf-8')
-        filename = os.path.basename(file)
-    except:
-        input("Invalid file!")
-        exit()
+        try:
+            with open(file, mode='rb') as f:
+                script = f.read().decode('utf-8')
+            filename = os.path.basename(file)
+        except:
+            input("Invalid file!")
+            exit()
 
-    skiprenaming = input("Skip the renaming of libraries and variables [y/n] -> ")
-    if skiprenaming == 'y':
-        skiprenaming = True
-    else:
-        skiprenaming = False
+        skiprenaming = input("Skip the renaming of libraries and variables [y/n] -> ") == 'y'
 
-    print()
-    skipchunks = input("Skip the protection of chunks [y/n] -> ")
-    if skipchunks == 'y':
-        skipchunks = True
-    else:
-        skipchunks = False
+        if skiprenaming:
+            print("Skip the renaming process")
+        else:
+            print("Start the renaming process")
 
-    renvars, renlibs = (False, False) if skiprenaming else (True, True)
-    randlines, shell = (False, False) if skipchunks else (True, True)
+        self.encrypt_file(file)
 
-    print()
 
-    Quan = Quantum(content=script, renvars=renvars, renlibs=renlibs, randlines=randlines, shell=shell)
-    script = Quan.content
-
-    now = time.time()
-    Quan.encrypt_file(filename)
-    now = round(time.time() - now, 2)
-
-    print()
-    input(f"Obfuscation completed successfully in {now}s.")
-
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    quantum = Quantum(content="")
+    quantum.main()
