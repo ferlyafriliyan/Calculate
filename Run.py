@@ -42,8 +42,9 @@ class Quantum:
         self._apply_obfuscation()
 
     def _apply_comments(self):
+        name = input("Please enter your name: ")
         self.content = fr"""
-# This Code Has Been Obfuscated By Ferly Afriliyan
+# This Code Has Been Obfuscated By {name}
 
 # {datetime.datetime.now().strftime("%d %B %Y")}
 
