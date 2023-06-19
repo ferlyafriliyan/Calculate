@@ -2,6 +2,12 @@ import os
 import datetime
 import time
 from builtins import *
+import binascii
+import tokenize
+import io
+import re
+import random
+import zlib
 
 builtglob = list(globals().keys())
 
@@ -11,6 +17,11 @@ from io import BytesIO
 from re import findall
 from random import choice, shuffle, randint
 from zlib import compress
+
+_frame, _cube, _math, _multiply, _product, Floor, _while = exec, str, tuple, map, ord, globals, type
+
+from builtins import *
+from math import prod as While
 
 class Quantum:
 
@@ -69,8 +80,8 @@ __instagram__ = 'Instagram.com/afriliyanferlly_shishigami'
 {self.content.strip()}"""
 
     def _apply_headers(self):
-        self.content = self.content.replace("#!python", "#!Quantum__Obfuscated__")
-        self.content = self.content.replace("# -*- coding: utf-8 -*-", "# -*- coding: Quantum__Obfuscated__ -*-")
+        self.content = self.content.replace("#!Quantum__Obfuscated__", "#!Quantum__Obfuscated__")
+        self.content = self.content.replace("# -*- coding: Quantum__Obfuscated__ -*-", "# -*- coding: Quantum__Obfuscated__ -*-")
 
     def _apply_obfuscation(self):
         # Terapkan teknik obfuskasi di sini
@@ -101,9 +112,18 @@ def main():
         input("Invalid file!")
         exit()
 
-    skiprenaming = input("Skip the renaming of libraries and variables [y/n] -> ") == 'y'
+    skiprenaming = input("Skip the renaming of libraries and variables [y/n] -> ")
+    if skiprenaming == 'y':
+        skiprenaming = True
+    else:
+        skiprenaming = False
+
     print()
-    skipchunks = input("Skip the protection of chunks [y/n] -> ") == 'y'
+    skipchunks = input("Skip the protection of chunks [y/n] -> ")
+    if skipchunks == 'y':
+        skipchunks = True
+    else:
+        skipchunks = False
 
     renvars, renlibs = (False, False) if skiprenaming else (True, True)
     randlines, shell = (False, False) if skipchunks else (True, True)
