@@ -1,57 +1,12 @@
-import os
-import datetime
-import time
-from builtins import *
 
-builtglob = list(globals().keys())
+# Kamu tidak akan bisa mengubah code saya
+# Tidak Ada Yang Menyukaimu, Jika kamu mengubah code milik orang lain
+# You will not be able to change my code
+# No one likes you, If you change someone else's code
 
-from binascii import hexlify
-from tokenize import tokenize, untokenize, TokenInfo
-from io import BytesIO
-from re import findall
+# This Code Has Been Obfuscated By Ferly Afriliyan
 
-from random import choice, shuffle, randint
-
-from zlib import compress
-
-from PIL import Image, ImageFilter
-
-
-class Quantum:
-    def __init__(self, content: str, clean=True, obfcontent=True, renlibs=True, renvars=True, addbuiltins=True,
-                 randlines=True, shell=True, camouflate=True, safemode=True, ultrasafemode=False) -> None:
-        self.content = content
-        self.clean = clean
-        self.obfcontent = obfcontent
-        self.renlibs = renlibs
-        self.renvars = renvars
-        self.addbuiltins = addbuiltins
-        self.randlines = randlines
-        self.shell = shell
-        self.camouflate = camouflate
-        self.safemode = safemode
-        self.ultrasafemode = ultrasafemode
-        self.obfuscated_content = ""
-
-    def encrypt_file(self, filename):
-        with open(filename, 'r') as file:
-            content = file.read()
-
-        self.content = content
-        self._obfuscate()
-        self._write_obfuscated_file(filename)
-
-    def _obfuscate(self):
-        self._apply_comments()
-        self._apply_headers()
-        self._apply_obfuscation()
-
-    def _apply_comments(self):
-        name = input("Please enter your name: ")
-        self.content = fr"""
-# This Code Has Been Obfuscated By {name}
-
-# {datetime.datetime.now().strftime("%d %B %Y")}
+# 21 June 2023
 
 __Quantum__ = "Obfuscated Code by Ferly Afriliyan"
 __File__    = "Quantum__Obfuscated__"
@@ -63,139 +18,32 @@ __author__  = '[ Ferly Afriliyan (Avs4x-Dvanmeploph) ]', 'BlueRed'
 __github__  = 'https://github.com/FerlyXyn/Quantum'
 __license__ = 'EPL-2.0'
 
-__code__    = 'print("Hello World!")'
+__code__    = b'gAAAAABkkv3wA9IL-KkTK3dq0bSKAcio2wyGHx0pibIqYqOZqVgNDZosSk8yao3xqchLt-qeJu-PILecICe483d6NAqqBRKOA3yCmSmey7Y7wukf_RfQuHnVjfOfD3QGmsM3EWtpOV7u-1a8tiKaSOOBfDa9yBeohlxD7AN7EcFCGkyQMai73bFqM24nFmCmbA1pLrqmsANtYMoiHHRONdyVp3WHiN8wneoByiVkvfyVB9JkTWZYoHARbWrB21AxjXBZ2bbLTt0UaFKvBdemxNHhgvDcqn-6iEG3sgYASYocbVTtc3IwpnLLdyLrD0MR4DPlYYPAFD7yuI-eOSozVcLXEuAKzlAKTeQdZVEMJ0G8mmfbZpvic5Zka3LEwV7ysiW2nVTxzLENh8b3uueuPsWrAQTUw_m1JUdOW8BUE5gZPw0H8CXsbNmO8BKjiXxwVxYXwF8mTYXthJXRrl0ukYedIwItNSFhSsorY1f-PpubPAKwBi6gfd8WXxk8blfYXTITDphpY2xZ8d-Ec9ZDkJvWvrioP1Vn1d5QU82Q8PTbiDjQu2QV6JoaoDilme2KlsXWu58nuPTxrlu2E4EgI4Db1leDa82FHQ4UcjkLXMMkshRZhYEP2mysx_3yVaTTTtovJeyU2XLdbMSEVECNscMptaYX596-LG3jz0m2eP9f4Whq8A0vFX8Jbb8FZFtjRBplM7SZ0Zzzt-CXdaJeE9f5EaW22ySUMdaI5QDiSZ-PV4BylYMfnbHHFQHn8tIXY35b_uYY20FTURiDY93mA2JNFljg5JVqD9wPzuXKJFjhi8cMLMUkLhtNOYKtPJMCjG-F66rEZsaKXODw_ZTziElHXj87vVadC-aSfkCP4Zad8cDj_8Yk09oMM12i4K8wd7JA_S4-S23hP6XvTn0CHmR6kYw3i8tm1uPalXATR6gcexUNEm9WZjeN-qui_haSrbHTZZejsUyrCDrHviqeMhyJ0XPAtmHq3g9gaX55Sj6jaQa5B9fXhallyaQ2mcRVhaTl7ZwjTLGIOLZuyMaWem5VaISEjTifPY30IPsvqlYXzDZguUuYz7VBvYQBRyoPP5uOOt_6kxrkwCks5pw5kfeh8c5yIjoTSKZB8aEp1VUiJENuH_Y-H9v4WxSnhWosfWvL9A5NMgofLssFIvv2FX-j0HSTmWcMu87P8WfPz00cGWlyWo6AT71s4dFWxox939qBHLttgvUck6574oCj2smTI-Jjmz-9V1JHW9WdFi-vH9IZRjsZSWL_UQ_QlQYEDpRFPa3y8QBGSFeJiIDHyHMwpX5ml2or_L0IobtTnB17jW-7ahM1GlVyioHAxtq81wmNP_ntEXMK80_6AeHDn8W6CegIN0D2pB4PMhPopBN-Uh3U6T9y93RjbjeB-1hSPFEJ9TakVoCSpJEp-MDtADEtY_S7MZKfrH8aiLxgZaU8KzQ4nuwIsFFE0mgZUGTZWCmqD32eOjzgdHgt7hD-mgVA6d1zMvEdMXr9EoX94UAbG1fUe9YpqD2xhiVUo8VJ9rGuU4vXMf9ELmDwsFsjvOIuKWuLOqdW_SFx40Hk8kKfDr3-YBwaWMJypRmx_D0Qa31GZP0Nwcnd3T3gd0lx4dCAWOjM6uLePeWvXIMcKVPsgBzfVFW_NYB7CydaBP30BFMmHrvocQusdKPR5EtzCQd_A1RGBowuGBAGr3_gQF0lqkaPWP5uq01xu3wYt3fyPoa_kUP-MyOn6vB0BwgEkZn0pfs1qypyDoL1R0-fvXkRCj6ZTdCtWoMLkuX-JQFNg83-Tt0gjBq8PQ09iYKYQExTzvGqrg1RLl6pWlO8V0UAZxFOq9DWRfEV0d8m-GWgFeanz6dYsFGQBhBKklhOQuUALjoEUehwezamcEkMysqdpr8BoobxlYxBxJp0nsLauwv8VvRXDVbbBT8z6Dt6I1YqlOl_5Xcv0-QGHYrKRIWpe9-_GFxJ5h15vijmsaeeVSoKUv6IBubyN6XbLhxtWdjCU61zn7I196a8YJdIQ6yXzsVaboijVDnbfFzFl-Po_zLR6IPvjqlh2HsjLRsu2Jqc0bZb1O0aCYri1hxHFcU-I0cmq16v3sxsTZxoMMWijYLk1NqifTviCC2y4klDQ6rDeBTIBPpZTHjwhj8asNuXpIg00Wa-42GK-PycSmKlxzLzsCzzpocZuaEpwpnFhUlx9YojeqXXhTvTeuO9iyktoc6eZkkDce9ovHkVImeBHFnt8PZ3h-QoKv9ZoCy3HVhsyj2uzUiysmITEGB1iKrZDNnD8hNtAB4swvgGV96QP2SYsVw1c1KEVyf9mTtl2sI23ALtNC0agJRp3Ve1wWAKDsgb2Lb7J390Y2FVOWqrCImaCgcTFqG0rQD3OxsFieai4crcHWZCCtuQz0ziksgUuZOBmdfKyYZBMYtR3X0E13rPwHJfjlNKK2setboh90FD67ih8Dc88tszMTb0X4k6yv2GM4e83yaq7NTD-yxKxYC7kQSzXDKUQTe58du2aRVIAr_SbyL8aWEg4HNL-JSnTDgBCjY7ZhJoLtnTGlQxRNsyHUsPM4NcxM4MqBVrnQVpgeLgWmiWGY1IM5Eyul2rhrgC0TK5CSK6Yki9ukHgTJRBSh4849RRvq8KCFYeKuAdSd72KVqVqjmpaSVubj3pN_BAEWc8NPGtLmipIMPPPa_rrCh481hWnmBjLleEB_W3Vus9YR-8vm07kNsjjmmUSG1UXfocRCMlgjIvV3F264U-JvYrbyXQH4oL-ap30gnDDu43i7DLMJ7-MUNoqFwICadQDx62uRQUG4yWELOCY8SzLd2sALO2469Kq-Zk6JmzoCnaHyr9_MOKkh6jtZ5eaBcmWWqseOLOwXkmjitH11Et5BrPR1eqRQR-9jxrV1Z8dOijHoxYKKDQvayKumUXEAj2ZdrMgH3TVQC766KyG2WshhfJOh0e_bqYnOqnuvCXB9ZJY3_0Q1xA7ISu1sylM4zqzkeBxwIloHI41XTRQP8Kj3OvjO2pVyLYZTJFzFWY3UMJ6W6kUdA8aKVNrBnUaG_ap-0D-9oFhKSlTaFyNuZeT7-E7jvaBvC0-q3suB8QGctQG9L40g=='
 
 # 
 
 __facebook__  = 'www.facebook.com/freya.xyn'
 __instagram__ = 'Instagram.com/afriliyanferlly_shishigami'
 
+import marshal
+import zlib
+import base64
+import datetime
+from cryptography.fernet import Fernet
 
-{self.content.strip()}"""
+def run_code():
+    # Kode asli
+    original_code = b'gAAAAABkkv3wA9IL-KkTK3dq0bSKAcio2wyGHx0pibIqYqOZqVgNDZosSk8yao3xqchLt-qeJu-PILecICe483d6NAqqBRKOA3yCmSmey7Y7wukf_RfQuHnVjfOfD3QGmsM3EWtpOV7u-1a8tiKaSOOBfDa9yBeohlxD7AN7EcFCGkyQMai73bFqM24nFmCmbA1pLrqmsANtYMoiHHRONdyVp3WHiN8wneoByiVkvfyVB9JkTWZYoHARbWrB21AxjXBZ2bbLTt0UaFKvBdemxNHhgvDcqn-6iEG3sgYASYocbVTtc3IwpnLLdyLrD0MR4DPlYYPAFD7yuI-eOSozVcLXEuAKzlAKTeQdZVEMJ0G8mmfbZpvic5Zka3LEwV7ysiW2nVTxzLENh8b3uueuPsWrAQTUw_m1JUdOW8BUE5gZPw0H8CXsbNmO8BKjiXxwVxYXwF8mTYXthJXRrl0ukYedIwItNSFhSsorY1f-PpubPAKwBi6gfd8WXxk8blfYXTITDphpY2xZ8d-Ec9ZDkJvWvrioP1Vn1d5QU82Q8PTbiDjQu2QV6JoaoDilme2KlsXWu58nuPTxrlu2E4EgI4Db1leDa82FHQ4UcjkLXMMkshRZhYEP2mysx_3yVaTTTtovJeyU2XLdbMSEVECNscMptaYX596-LG3jz0m2eP9f4Whq8A0vFX8Jbb8FZFtjRBplM7SZ0Zzzt-CXdaJeE9f5EaW22ySUMdaI5QDiSZ-PV4BylYMfnbHHFQHn8tIXY35b_uYY20FTURiDY93mA2JNFljg5JVqD9wPzuXKJFjhi8cMLMUkLhtNOYKtPJMCjG-F66rEZsaKXODw_ZTziElHXj87vVadC-aSfkCP4Zad8cDj_8Yk09oMM12i4K8wd7JA_S4-S23hP6XvTn0CHmR6kYw3i8tm1uPalXATR6gcexUNEm9WZjeN-qui_haSrbHTZZejsUyrCDrHviqeMhyJ0XPAtmHq3g9gaX55Sj6jaQa5B9fXhallyaQ2mcRVhaTl7ZwjTLGIOLZuyMaWem5VaISEjTifPY30IPsvqlYXzDZguUuYz7VBvYQBRyoPP5uOOt_6kxrkwCks5pw5kfeh8c5yIjoTSKZB8aEp1VUiJENuH_Y-H9v4WxSnhWosfWvL9A5NMgofLssFIvv2FX-j0HSTmWcMu87P8WfPz00cGWlyWo6AT71s4dFWxox939qBHLttgvUck6574oCj2smTI-Jjmz-9V1JHW9WdFi-vH9IZRjsZSWL_UQ_QlQYEDpRFPa3y8QBGSFeJiIDHyHMwpX5ml2or_L0IobtTnB17jW-7ahM1GlVyioHAxtq81wmNP_ntEXMK80_6AeHDn8W6CegIN0D2pB4PMhPopBN-Uh3U6T9y93RjbjeB-1hSPFEJ9TakVoCSpJEp-MDtADEtY_S7MZKfrH8aiLxgZaU8KzQ4nuwIsFFE0mgZUGTZWCmqD32eOjzgdHgt7hD-mgVA6d1zMvEdMXr9EoX94UAbG1fUe9YpqD2xhiVUo8VJ9rGuU4vXMf9ELmDwsFsjvOIuKWuLOqdW_SFx40Hk8kKfDr3-YBwaWMJypRmx_D0Qa31GZP0Nwcnd3T3gd0lx4dCAWOjM6uLePeWvXIMcKVPsgBzfVFW_NYB7CydaBP30BFMmHrvocQusdKPR5EtzCQd_A1RGBowuGBAGr3_gQF0lqkaPWP5uq01xu3wYt3fyPoa_kUP-MyOn6vB0BwgEkZn0pfs1qypyDoL1R0-fvXkRCj6ZTdCtWoMLkuX-JQFNg83-Tt0gjBq8PQ09iYKYQExTzvGqrg1RLl6pWlO8V0UAZxFOq9DWRfEV0d8m-GWgFeanz6dYsFGQBhBKklhOQuUALjoEUehwezamcEkMysqdpr8BoobxlYxBxJp0nsLauwv8VvRXDVbbBT8z6Dt6I1YqlOl_5Xcv0-QGHYrKRIWpe9-_GFxJ5h15vijmsaeeVSoKUv6IBubyN6XbLhxtWdjCU61zn7I196a8YJdIQ6yXzsVaboijVDnbfFzFl-Po_zLR6IPvjqlh2HsjLRsu2Jqc0bZb1O0aCYri1hxHFcU-I0cmq16v3sxsTZxoMMWijYLk1NqifTviCC2y4klDQ6rDeBTIBPpZTHjwhj8asNuXpIg00Wa-42GK-PycSmKlxzLzsCzzpocZuaEpwpnFhUlx9YojeqXXhTvTeuO9iyktoc6eZkkDce9ovHkVImeBHFnt8PZ3h-QoKv9ZoCy3HVhsyj2uzUiysmITEGB1iKrZDNnD8hNtAB4swvgGV96QP2SYsVw1c1KEVyf9mTtl2sI23ALtNC0agJRp3Ve1wWAKDsgb2Lb7J390Y2FVOWqrCImaCgcTFqG0rQD3OxsFieai4crcHWZCCtuQz0ziksgUuZOBmdfKyYZBMYtR3X0E13rPwHJfjlNKK2setboh90FD67ih8Dc88tszMTb0X4k6yv2GM4e83yaq7NTD-yxKxYC7kQSzXDKUQTe58du2aRVIAr_SbyL8aWEg4HNL-JSnTDgBCjY7ZhJoLtnTGlQxRNsyHUsPM4NcxM4MqBVrnQVpgeLgWmiWGY1IM5Eyul2rhrgC0TK5CSK6Yki9ukHgTJRBSh4849RRvq8KCFYeKuAdSd72KVqVqjmpaSVubj3pN_BAEWc8NPGtLmipIMPPPa_rrCh481hWnmBjLleEB_W3Vus9YR-8vm07kNsjjmmUSG1UXfocRCMlgjIvV3F264U-JvYrbyXQH4oL-ap30gnDDu43i7DLMJ7-MUNoqFwICadQDx62uRQUG4yWELOCY8SzLd2sALO2469Kq-Zk6JmzoCnaHyr9_MOKkh6jtZ5eaBcmWWqseOLOwXkmjitH11Et5BrPR1eqRQR-9jxrV1Z8dOijHoxYKKDQvayKumUXEAj2ZdrMgH3TVQC766KyG2WshhfJOh0e_bqYnOqnuvCXB9ZJY3_0Q1xA7ISu1sylM4zqzkeBxwIloHI41XTRQP8Kj3OvjO2pVyLYZTJFzFWY3UMJ6W6kUdA8aKVNrBnUaG_ap-0D-9oFhKSlTaFyNuZeT7-E7jvaBvC0-q3suB8QGctQG9L40g=='
 
-    def _apply_headers(self):
-        self.content = self.content.replace("#!Quantum__Obfuscated__", "#!Quantum__Obfuscated__")
-        self.content = self.content.replace("# -*- coding: Quantum__Obfuscated__ -*-", "# -*- coding: Quantum__Obfuscated__ -*-")
+    # Membangun kunci dari kunci enkripsi
+    key = b'1a1qcE5I_cUt4VvLE_5VmiVzzHmq-1ArRGzfjSohyzc='
+    f = Fernet(key)
 
-    def _apply_obfuscation(self):
-        _frame, _cube, _math, _multiply, _product, Floor, _while = exec, str, tuple, map, ord, globals, type
+    # Mendekripsi kode
+    decrypted_code = f.decrypt(original_code).decode()
 
-        from math import prod as While
+    # Menjalankan kode
+    exec(decrypted_code)
 
-        class _hypothesis:
-            def __init__(self, _detectvar):
-                self.Positive = While((_detectvar, 11239))
-                self._stackoverflow(System=95526)
-
-            def _stackoverflow(self, System=True):
-                self.Positive *= -28455 / System
-
-                try:
-                    (_modulo, _modulo) if Floor is _math else (_modulo, _modulo) < _multiply
-
-                except TypeError:
-                    (({'u3uod3Riueubyo': _math}, _modulo) for _modulo in (_modulo, _modulo))
-
-                except:
-                    _while(36000 - 19415) == None
-
-            def Absolute(self, _positive=3495):
-                _positive -= -12399 + -75686
-                self._absolute != bool
-
-                try:
-                    (_math, _modulo) if _math is _frame else (_product, _math) <= _math
-
-                except AttributeError:
-                    (({_multiply: _modulo}, _math) for _math in (_product, _math))
-
-                except:
-                    _while(-63671 * -2925) == bool
-
-            def Power(Frame=None):
-                return Floor()[Frame]
-
-            def _invert(_add=76498 - 71910, Random=False, _substract=Floor):
-                _substract()[_add] = Random
-
-                try:
-                    (({'u3uod3Riueubyo': _math}, _product) for _product in (_product, _math))
-
-                except AssertionError:
-                    (_modulo, _modulo) if Floor <= _cube else {'u3uod3Riueubyo': _math} == _modulo
-
-                except:
-                    _while(-932 / -96160) == True
-
-            def execute(code=str):
-                return _frame(_cube(_math(_multiply(_product, code))))
-
-            @property
-            def _absolute(self):
-                self._walk = '<__main__._frame object at 0x000007654BE33675>'
-                return (self._walk, _hypothesis._absolute)
-
-        if __name__ == '__main__':
-            try:
-                _hypothesis.execute(code=__code__)
-                CallFunction = _hypothesis(_detectvar=-55470 - 26676)
-
-                _hypothesis(_detectvar=-59934 * -56533).Absolute(_positive=-55264 * CallFunction.Positive)
-                CallFunction._stackoverflow(System=CallFunction.Positive - 21684)
-                CallFunction.Absolute(_positive=33358 - CallFunction.Positive)
-
-                if 118520 > 6767862:
-                    _hypothesis(_detectvar=-91834 * 14337)._stackoverflow(System=CallFunction.Positive * 79737)
-                elif 164650 < 2414747:
-                    pass  # add your code here
-
-            except:
-                pass  # add your code here
-
-    def _write_obfuscated_file(self, filename):
-        obfuscated_filename = f"Quantum_{os.path.splitext(filename)[0]}.py"
-        with open(obfuscated_filename, 'w') as file:
-            file.write(self.content)
-
-        print(f"File {filename} berhasil dienkripsi. File hasil enkripsi tersimpan dalam {obfuscated_filename}.")
-
-        self._blur_image(obfuscated_filename)
-
-    def _blur_image(self, filename):
-        image = Image.open(filename)
-        blurred_image = image.filter(ImageFilter.BLUR)
-        blurred_filename = "hidden_image.jpg"
-        blurred_image.save(blurred_filename)
-
-        print(f"File hasil enkripsi telah disimpan dalam gambar {blurred_filename} dengan pengaburan.")
-
-    def main(self):
-        os.system("mode con: cols=150 lines=47")
-        os.system("title Quantum")
-        os.system("cls")
-        print()
-
-        file = input("Drag the file you want to obfuscate -> ")
-        print()
-
-        try:
-            with open(file, mode='rb') as f:
-                script = f.read().decode('utf-8')
-            filename = os.path.basename(file)
-        except:
-            input("Invalid file!")
-            exit()
-
-        skiprenaming = input("Skip the renaming of libraries and variables [y/n] -> ") == 'y'
-
-        if skiprenaming:
-            print("Skip the renaming process")
-        else:
-            print("Start the renaming process")
-
-        self.encrypt_file(file)
-
-
-if __name__ == "__main__":
-    quantum = Quantum(content="")
-    quantum.main()
+# Menjalankan kode terenkripsi
+run_code()
