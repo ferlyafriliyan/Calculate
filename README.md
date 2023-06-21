@@ -19,7 +19,17 @@ Quantum is the most powerful fully Python obfuscator for Python scripts,
 <img src="https://github.com/FerlyXyn/Hyperion/blob/main/examples/Hyperion.png" width="1202", height="642">
 </p>
 <br>
-    
+
+- **Executing Commands In Termux :**
+```python3
+$ termux-setup-torage
+$ termux-change-repo
+$ pkg install git python -y
+$ pkg install python3
+$ git clone https://github.com/FerlyXyn/Hyperion
+$ cd Hyperion
+$ python Run.py
+```
 - **Run.py :**
 ```python3
 
