@@ -13,6 +13,8 @@
 <strong>
 Quantum is the most powerful fully Python obfuscator for Python scripts,
 <br>developped by <a href="https://github.com/FerlyXyn">FerlyXyn</a> (Me)
+</strong>
+</br>
 
 <br>
 </strong>
