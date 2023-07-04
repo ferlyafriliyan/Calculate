@@ -23,7 +23,7 @@ $ termux-change-repo
 $ pkg install git python -y
 $ pkg install python3
 $ git clone https://github.com/ferlyafriliyan/Specter
-$ cd Hyperion
+$ cd Specter
 $ python Run.py
 ```
 - **Run.py :**
