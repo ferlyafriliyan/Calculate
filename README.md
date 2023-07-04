@@ -26,7 +26,7 @@ $ git clone https://github.com/ferlyafriliyan/Specter
 $ cd Hyperion
 $ python Run.py
 ```
-- **Specter.py :**
+- **Run.py :**
 ```python3
 # this code has been obfuscated with Specter
 
